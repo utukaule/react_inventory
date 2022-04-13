@@ -2,11 +2,12 @@ import './App.css';
 import { Book } from './components/book';
 import { Noot } from './components/nootbooks';
 import { Pens } from './components/pens';
-import { Total } from './components/total';
-
 
 function App() {
 
+  const getValue = (value)=>{
+    console.log(value); 
+  }
   // const [pens,penCount] = useState(22);
   // const [noteBook,noteBookCount] = useState(12);
 
@@ -15,17 +16,15 @@ function App() {
 
   return (
     <div className="App">
+     <Book  fun ={getValue} />
      
-     
-    <Book />
     <Pens  />
     <Noot />
-    
+    <h1>{}</h1>
+     </div>
      
-
-     
-    </div>
   );
 }
+
 
 export default App;
